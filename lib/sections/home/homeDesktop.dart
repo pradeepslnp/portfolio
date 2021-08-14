@@ -26,7 +26,7 @@ class HomeDesktop extends StatelessWidget {
                 delay: Duration(seconds: 1),
                 duration: Duration(milliseconds: 800),
                 child: Image.asset(
-                  'assets/1.png',
+                  'assets/pp.png',
                   height: width < 1200 ? height * 0.8 : height * 0.85,
                 ),
               ),
