@@ -35,28 +35,28 @@ final kCommunityLogo = [
 final kCommunityLinks = ["https://bmsit.ac.in/", "", ""];
 
 // Tools & Tech
-final kTools = ["Flutter", "Dart", "JavaScript", "Java", "C++"];
+final kTools = ["Flutter", "Dart", "Firebase", "Java", "C++"];
 
 final kTools1 = ["HTML", "CSS", "Mysql", "DBMS", "React"];
 
 // services
 final kServicesIcons = [
-  // "assets/services/app.png",
   // "assets/services/ui.png",
   // "assets/services/rapid.png",
   // "assets/services/blog.png",
   "assets/services/open.png",
+  "assets/services/app.png",
 ];
 
-final kServicesTitles = [
-  "Open Source - GitHub",
-];
+final kServicesTitles = ["Open Source - GitHub", "Mobile App Development"];
 
 final kServicesDescriptions = [
   "Working as open source contributor on GitHub  and numerous forks on various projects liked and shared by other developers.\nCheck out my GitHub Profile https://github.com/pradeepslnp",
+  "Excelled in problem-solving, analyzing complex challenges, and delivering innovative solutions to create high-quality applications."
 ];
 
 final kServicesLinks = [
+  "https://github.com/pradeepslnp",
   "https://github.com/pradeepslnp",
 ];
 
@@ -108,6 +108,6 @@ final kContactTitles = [
 
 final kContactDetails = [
   "Banagalore, India",
-  "(+91) 850602046",
+  "(+91) 8050602046",
   "pradeepslnp7@gmail.com"
 ];

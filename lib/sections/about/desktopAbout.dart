@@ -6,6 +6,7 @@ import 'package:portfolio/widget/aboutMeText.dart';
 import 'package:portfolio/widget/communityIconBtn.dart';
 import 'package:portfolio/widget/toolsTech.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio/widget/work.dart';
 
 class AboutDesktop extends StatelessWidget {
   final _communityLogoHeight = [50.0, 70.0, 30.0];
@@ -49,25 +50,31 @@ class AboutDesktop extends StatelessWidget {
               width >= 1185 ? Expanded(child: ToolsTech()) : ToolsTech()
             ],
           ),
+          Text(
+            "\WORK",
+            style: GoogleFonts.montserrat(
+              fontSize: height * 0.075,
+              fontWeight: FontWeight.w100,
+              letterSpacing: 1.0,
+            ),
+          ),
           SizedBox(
-            height: height * 0.055,
+            height: height * 0.05,
           ),
           Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              for (int i = 0; i < kCommunityLogo.length; i++)
-                CommunityIconBtn(
-                  icon: kCommunityLogo[i],
-                  link: kCommunityLinks[i],
-                  height: _communityLogoHeight[i],
-                ),
               Expanded(
-                child: Container(),
+                flex: 3,
+                child: Work(
+                  fontSize: width <= 1100 ? 14 : 16,
+                ),
               ),
-              NavBarLogo(
-                height: height * 0.04,
-              )
             ],
-          )
+          ),
+          SizedBox(
+            height: height * 0.050,
+          ),
         ],
       ),
     );

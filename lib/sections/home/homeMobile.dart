@@ -21,14 +21,14 @@ class _HomeMobileState extends State<HomeMobile> {
       width: width,
       child: Stack(
         children: [
-          Positioned(
-            bottom: 0.0,
-            right: -width * 0.3,
-            child: Opacity(
-              opacity: 0.7,
-              child: Image.asset('assets/pp.png', height: height * 0.65),
-            ),
-          ),
+          // Positioned(
+          //   bottom: 0.0,
+          //   right: -width * 0.3,
+          //   child: Opacity(
+          //     opacity: 0.7,
+          //     child: Image.asset('assets/pp.png', height: height * 0.65),
+          //   ),
+          // ),
           Container(
             margin: EdgeInsets.fromLTRB(width * 0.07, height * 0.12, 0, 0),
             child: Column(
@@ -55,8 +55,9 @@ class _HomeMobileState extends State<HomeMobile> {
                 Text(
                   "Pradeep S",
                   style: GoogleFonts.montserrat(
+                    color: Colors.black,
                       fontSize: height * 0.055,
-                      fontWeight: FontWeight.w100,
+                      fontWeight: FontWeight.w500,
                       letterSpacing: 1.1),
                 ),
                 Row(

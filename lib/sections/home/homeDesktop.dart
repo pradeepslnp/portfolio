@@ -16,22 +16,22 @@ class HomeDesktop extends StatelessWidget {
       width: width,
       child: Stack(
         children: [
-          Positioned(
-            top: width < 1200 ? height * 0.15 : height * 0.1,
-            right: width * 0.01,
-            child: Opacity(
-              opacity: 0.9,
-              child: EntranceFader(
-                offset: Offset(0, 0),
-                delay: Duration(seconds: 1),
-                duration: Duration(milliseconds: 800),
-                child: Image.asset(
-                  'assets/pp.png',
-                  height: width < 1200 ? height * 0.8 : height * 0.85,
-                ),
-              ),
-            ),
-          ),
+          // Positioned(
+          //   top: width < 1200 ? height * 0.15 : height * 0.1,
+          //   right: width * 0.01,
+          //   child: Opacity(
+          //     opacity: 0.9,
+          //     child: EntranceFader(
+          //       offset: Offset(0, 0),
+          //       delay: Duration(seconds: 1),
+          //       duration: Duration(milliseconds: 800),
+          //       child: Image.asset(
+          //         'assets/pp.png',
+          //         height: width < 1200 ? height * 0.8 : height * 0.85,
+          //       ),
+          //     ),
+          //   ),
+          // ),
           Container(
             margin: EdgeInsets.fromLTRB(width * 0.1, height * 0.2, 0, 0),
             child: Column(
@@ -43,7 +43,9 @@ class HomeDesktop extends StatelessWidget {
                     Text(
                       "WELCOME TO MY PORTFOLIO! ",
                       style: GoogleFonts.montserrat(
-                          fontSize: height * 0.03, fontWeight: FontWeight.w300),
+                          color: Colors.black,
+                          fontSize: height * 0.03,
+                          fontWeight: FontWeight.w300),
                     ),
                     EntranceFader(
                       offset: Offset(0, 0),
@@ -62,8 +64,9 @@ class HomeDesktop extends StatelessWidget {
                 Text(
                   "Pradeep S",
                   style: GoogleFonts.montserrat(
+                      color: Colors.black,
                       fontSize: width < 1200 ? height * 0.085 : height * 0.095,
-                      fontWeight: FontWeight.w100,
+                      fontWeight: FontWeight.w500,
                       letterSpacing: 4.0),
                 ),
                 // Text(
@@ -88,9 +91,10 @@ class HomeDesktop extends StatelessWidget {
                           speed: Duration(milliseconds: 50),
                           textStyle: GoogleFonts.montserrat(
                               fontSize: height * 0.03,
+                              color: Colors.black,
                               fontWeight: FontWeight.w200),
                           text: [
-                            " Front end  Developer",
+                            " Frontend  Developer",
                             " Flutter Learner",
                           ]),
                     ],

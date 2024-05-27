@@ -74,7 +74,7 @@ class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      // backgroundColor: Colors.brown,
       extendBodyBehindAppBar: true,
       appBar: MediaQuery.of(context).size.width > 760
           ? _appBarTabDesktop()
@@ -83,20 +83,38 @@ class _MainPageState extends State<MainPage> {
               elevation: 0.0,
             ),
       drawer: MediaQuery.of(context).size.width < 760 ? _appBarMobile() : null,
-      body: Container(
-        height: MediaQuery.of(context).size.height,
-        width: MediaQuery.of(context).size.width,
-        child: RawScrollbar(
-          controller: _scrollController,
-          thumbColor: kPrimaryColor,
-          thickness: 5.0,
-          child: ScrollablePositionedList.builder(
-            itemScrollController: _itemScrollController,
-            itemPositionsListener: _itemPositionListener,
-            itemCount: 8,
-            itemBuilder: (context, index) {
-              return sectionWidget(index);
-            },
+      body: DecoratedBox(
+        decoration: new BoxDecoration(
+          color: const Color(0xff7c94b6),
+          image: new DecorationImage(
+            fit: BoxFit.cover,
+            colorFilter: new ColorFilter.mode(
+                Color.fromARGB(255, 202, 199, 202).withOpacity(1.0),
+                BlendMode.softLight),
+            image: new AssetImage(
+              'assets/coding.jpg',
+            ),
+          ),
+        ),
+        child: Container(
+          // decoration: BoxDecoration(
+          //     gradient: LinearGradient(
+          //         colors: [Colors.red, Colors.blue, Colors.black])
+          //         ),
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          child: RawScrollbar(
+            controller: _scrollController,
+            thumbColor: kPrimaryColor,
+            thickness: 5.0,
+            child: ScrollablePositionedList.builder(
+              itemScrollController: _itemScrollController,
+              itemPositionsListener: _itemPositionListener,
+              itemCount: 8,
+              itemBuilder: (context, index) {
+                return sectionWidget(index);
+              },
+            ),
           ),
         ),
       ),
@@ -170,7 +188,7 @@ class _MainPageState extends State<MainPage> {
                   side: BorderSide(color: kPrimaryColor)),
               onPressed: () {
                 html.window.open(
-                    'https://drive.google.com/file/d/16vfoS6M92dvg1r7HpfMHqA7Y0jq3ZUNQ/view?usp=sharing',
+                    'https://drive.google.com/file/d/1ZA5UwNfI2VodnB4n5l3BNdOVKWChNFsx/view?usp=sharing',
                     "pdf");
               },
               child: Text(

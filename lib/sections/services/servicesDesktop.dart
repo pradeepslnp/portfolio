@@ -29,12 +29,6 @@ class ServiceDesktop extends StatelessWidget {
           ),
           Column(
             children: [
-              Row(
-                mainAxisAlignment: width < 1200
-                    ? MainAxisAlignment.spaceEvenly
-                    : MainAxisAlignment.center,
-                children: [],
-              ),
               SizedBox(
                 height: height * 0.04,
               ),
@@ -49,6 +43,17 @@ class ServiceDesktop extends StatelessWidget {
                       serviceTitle: kServicesTitles[0],
                       serviceDescription: kServicesDescriptions[0],
                       serviceLink: kServicesLinks[0],
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  WidgetAnimator(
+                    child: ServiceCard(
+                      cardWidth: width < 1200 ? width * 0.3 : width * 0.22,
+                      cardHeight: width < 1200 ? height * 0.4 : height * 0.35,
+                      serviceIcon: kServicesIcons[1],
+                      serviceTitle: kServicesTitles[1],
+                      serviceDescription: kServicesDescriptions[1],
+                      serviceLink: kServicesLinks[1],
                     ),
                   ),
                 ],

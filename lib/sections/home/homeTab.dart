@@ -15,14 +15,14 @@ class HomeTab extends StatelessWidget {
       width: width,
       child: Stack(
         children: [
-          Positioned(
-            bottom: width < 740 ? height * 0.1 : height * 0.15,
-            right: width < 740 ? -width * 0.2 : -width * 0.1,
-            child: Opacity(
-              opacity: 0.8,
-              child: Image.asset('assets/pp.png', height: height * 0.75),
-            ),
-          ),
+          // Positioned(
+          //   bottom: width < 740 ? height * 0.1 : height * 0.15,
+          //   right: width < 740 ? -width * 0.2 : -width * 0.1,
+          //   child: Opacity(
+          //     opacity: 0.8,
+          //     child: Image.asset('assets/pp.png', height: height * 0.75),
+          //   ),
+          // ),
           Container(
             margin: EdgeInsets.fromLTRB(
                 width * 0.1, width < 740 ? height * 0.15 : height * 0.2, 0, 0),
@@ -35,6 +35,7 @@ class HomeTab extends StatelessWidget {
                     Text(
                       "WELCOME TO MY PORTFOLIO! ",
                       style: GoogleFonts.montserrat(
+                        color: Colors.black,
                           fontSize: height * 0.03, fontWeight: FontWeight.w300),
                     ),
                     Image.asset(
@@ -49,8 +50,9 @@ class HomeTab extends StatelessWidget {
                 Text(
                   "Pradeep S",
                   style: GoogleFonts.montserrat(
+                    color: Colors.black,
                       fontSize: height * 0.07,
-                      fontWeight: FontWeight.w100,
+                      fontWeight: FontWeight.w500,
                       letterSpacing: 1.5),
                 ),
                 Row(
@@ -64,6 +66,7 @@ class HomeTab extends StatelessWidget {
                         speed: Duration(milliseconds: 50),
                         textStyle: GoogleFonts.montserrat(
                             fontSize: height * 0.03,
+                            color: Colors.black,
                             fontWeight: FontWeight.w200),
                         text: [
                           " Front end Developer",
